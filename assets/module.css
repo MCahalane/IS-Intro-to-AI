@@ -200,6 +200,18 @@ textarea{resize:vertical;line-height:1.5}
 .fb.no{border-left-color:var(--red);background:var(--red-soft)}
 .retry{margin-top:8px}
 
+/* one part per view */
+.paged .content>.block{display:none;padding-top:0}
+.paged .content>.block.active{display:block}
+.paged.show-all .content>.block,.paged.printing .content>.block{display:block;padding-top:56px}
+.paged.show-all .content>.block:first-child{padding-top:0}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:40px;padding-top:20px}
+.pager .btn{max-width:100%}
+.show-all .pager,.printing .pager{display:none}
+.rail nav a.done::after{content:" ✓";font-weight:900;color:var(--green)}
+.show-all-btn{width:100%;margin-top:12px}
+.block>h2:focus{outline:none}
+
 /* glossary */
 #gloss-search{margin:6px 0 16px;border:2px solid var(--ink)}
 .glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}

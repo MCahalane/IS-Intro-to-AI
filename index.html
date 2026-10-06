@@ -11,10 +11,36 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<!-- IS Learning Modules shared top bar: identical in every module; links back to the collection homepage -->
+<style id="isbar-style">
+.isbar{background:#231f20;color:#fff;border-bottom:7px solid #ffe600;font-family:Arial,Helvetica,sans-serif;position:relative;z-index:95}
+.isbar-in{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,56px);min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.isbar a{color:#fff;text-decoration:none}
+.isbar-home{display:flex;align-items:center;gap:12px}
+.isbar-tile{display:grid;place-items:center;width:34px;height:34px;background:#ffe600;color:#231f20;font-weight:900;font-size:13px;flex:0 0 34px}
+.isbar-home b{display:block;font-size:.95rem;line-height:1.2;font-weight:700}
+.isbar-home small{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#ffe600;line-height:1.4}
+.isbar-nav{display:flex;gap:22px}
+.isbar-nav a{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.isbar a:hover{color:#ffe600}
+.isbar a:focus-visible{outline:3px solid #ffe600;outline-offset:3px}
+@media(max-width:700px){.isbar-in{min-height:52px;gap:12px}.isbar-nav a:not(.isbar-all){display:none}.isbar-home small{display:none}.isbar-tile{width:30px;height:30px;flex-basis:30px}.isbar-all{white-space:nowrap}}
+@media print{.isbar{display:none}}
+</style>
+<nav class="isbar" aria-label="Information Systems learning modules">
+  <div class="isbar-in">
+    <a class="isbar-home" href="https://mcahalane.github.io/IS-Learning-Modules/"><span class="isbar-tile" aria-hidden="true">IS</span><span><b>Information Systems</b><small>Plug &amp; Play Learning Modules</small></span></a>
+    <div class="isbar-nav">
+      <a class="isbar-all" href="https://mcahalane.github.io/IS-Learning-Modules/#modules">All modules</a>
+      <a href="https://mcahalane.github.io/IS-Learning-Modules/#plug-in">Plug it in</a>
+      <a href="https://mcahalane.github.io/IS-Learning-Modules/#why">Why this approach</a>
+    </div>
+  </div>
+</nav>
 <div class="page-progress" aria-hidden="true"><span id="page-progress"></span></div>
 
 <header class="topbar">
-  <div><div class="eyebrow">Information Systems</div><b>Introduction to AI for Business</b></div>
+  <div><div class="eyebrow">Module</div><b>Introduction to AI for Business</b></div>
   <button type="button" id="menu-btn" aria-expanded="false" aria-controls="rail">Contents</button>
 </header>
 
@@ -48,6 +74,7 @@
     <p>Ungraded practice. Answers and notes save in this browser only.</p>
     <button type="button" class="btn small" id="reset">Reset my progress</button>
   </div>
+  <button type="button" class="btn show-all-btn" id="show-all" aria-pressed="false">Show all parts</button>
 </aside>
 
 <main id="main" tabindex="-1">

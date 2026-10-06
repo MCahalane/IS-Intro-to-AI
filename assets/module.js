@@ -60,6 +60,10 @@
     Object.keys(QC).forEach(function (k) { QC[k].forEach(function (q, i) { if (state.answers[k + '-' + i] === q.a) n++; }); });
     $('#progress-text').textContent = n + ' of ' + TOTAL + ' quick checks correct';
     $('#progress-fill').style.width = (n / TOTAL * 100) + '%';
+    Object.keys(QC).forEach(function (k) {
+      var done = QC[k].every(function (q, i) { return state.answers[k + '-' + i] === q.a; });
+      var link = document.querySelector('.rail nav a[href="#' + k + '"]'); if (link) link.classList.toggle('done', done);
+    });
   }
 
   $$('.qc[data-qc]').forEach(function (box) {
@@ -180,17 +184,75 @@
   renderGloss('');
   $('#gloss-search').addEventListener('input', function (e) { renderGloss(e.target.value); });
 
-  // navigation: active section, reading progress, mobile menu
-  var links = $$('.rail nav a'), sections = links.map(function (a) { return document.getElementById(a.hash.slice(1)); });
-  var bar = $('#page-progress');
-  function onScroll() {
-    var y = window.scrollY + 140, cur = 0;
-    sections.forEach(function (s, i) { if (s && s.offsetTop <= y) cur = i; });
-    links.forEach(function (a, i) { a.classList.toggle('active', i === cur); if (i === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
-    var h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + '%';
+  // navigation: one part per view, with Previous/Next, deep links and a "show all" mode
+  document.body.classList.add('paged');
+  var links = $$('.rail nav a');
+  var sections = $$('.content > .block');
+  var ids = sections.map(function (sec) { return sec.id; });
+  var label = {}; links.forEach(function (a) { label[a.hash.slice(1)] = a.textContent.replace(/^\d+ · /, ''); });
+  var bar = $('#page-progress'), all = $('#show-all');
+  var current = ids[0];
+
+  // pager at the foot of each part
+  sections.forEach(function (sec, i) {
+    var nav = document.createElement('nav'); nav.className = 'pager'; nav.setAttribute('aria-label', 'Part navigation');
+    var prev = ids[i - 1], next = ids[i + 1];
+    nav.innerHTML = (prev ? '<a class="btn" href="#' + prev + '">← ' + esc(label[prev] || 'Previous') + '</a>' : '<span></span>') +
+      (next ? '<a class="btn dark" href="#' + next + '">Next: ' + esc(label[next] || 'Next') + ' →</a>' : '');
+    sec.appendChild(nav);
+  });
+
+  function topOfContent() { var c = $('.content'); return c.getBoundingClientRect().top + window.scrollY - 10; }
+  function show(id, opts) {
+    opts = opts || {};
+    if (ids.indexOf(id) < 0) id = ids[0];
+    current = id;
+    sections.forEach(function (sec) { sec.classList.toggle('active', sec.id === id); });
+    links.forEach(function (a) { var on = a.hash === '#' + id; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    if (!opts.initial && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+    if (opts.scroll) jump(id === ids[0] ? 0 : topOfContent());
+    if (opts.focus) { var h = $('#' + id + ' > h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } }
+    onScroll();
   }
-  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); onScroll();
+  function jump(y) { window.scrollTo({ top: y, left: 0, behavior: 'instant' }); }
+  function reveal(el) { el.scrollIntoView({ behavior: 'instant', block: 'start' }); }
+  function sectionOf(el) { while (el && !(el.classList && el.classList.contains('block'))) el = el.parentNode; return el; }
+
+  // any in-page link: open the part that contains the target
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href').slice(1), target = id && document.getElementById(id); if (!target) return;
+    var sec = sectionOf(target); if (!sec) return;
+    e.preventDefault();
+    if (rail.classList.contains('open')) menu.click();
+    if (document.body.classList.contains('show-all')) { reveal(target); history.replaceState(null, '', '#' + id); return; }
+    show(sec.id, { scroll: target === sec, focus: target === sec });
+    if (target !== sec) reveal(target);
+  });
+  addEventListener('hashchange', function () { var t = document.getElementById(location.hash.slice(1)); var sec = sectionOf(t); if (sec) show(sec.id, { scroll: true }); });
+
+  // show all parts (for searching the whole module or printing)
+  all.addEventListener('click', function () {
+    var on = document.body.classList.toggle('show-all');
+    all.setAttribute('aria-pressed', on ? 'true' : 'false');
+    all.textContent = on ? 'Show one part at a time' : 'Show all parts';
+    if (on) reveal(document.getElementById(current)); else show(current, { scroll: true });
+  });
+  addEventListener('beforeprint', function () { document.body.classList.add('printing'); });
+  addEventListener('afterprint', function () { document.body.classList.remove('printing'); });
+
+  // reading progress strip (within the page as displayed)
+  function onScroll() { var h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + '%'; }
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll);
+
   var menu = $('#menu-btn'), rail = $('#rail');
   menu.addEventListener('click', function () { var o = rail.classList.toggle('open'); menu.setAttribute('aria-expanded', o ? 'true' : 'false'); menu.textContent = o ? 'Close' : 'Contents'; });
-  links.forEach(function (a) { a.addEventListener('click', function () { if (rail.classList.contains('open')) menu.click(); }); });
+
+  // open the linked part (or the overview) at the top of the page, without the browser's anchor jump
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var first = document.getElementById(location.hash.slice(1)), firstSec = sectionOf(first);
+  show(firstSec ? firstSec.id : ids[0], { initial: true });
+  function land() { if (first && first !== firstSec) reveal(first); else jump(0); }
+  land();
+  addEventListener('load', function () { requestAnimationFrame(function () { setTimeout(land, 0); }); }, { once: true });
 })();
