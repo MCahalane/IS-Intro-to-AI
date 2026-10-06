@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Introduction to AI for Business · Information Systems</title>
+<meta name="description" content="Introduction to AI for Business Students: a standalone Information Systems learning module on human oversight of AI, the jagged frontier, the illusion of explanatory depth and using AI tools responsibly.">
+<meta name="theme-color" content="#231f20">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/module.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page-progress" aria-hidden="true"><span id="page-progress"></span></div>
+
+<header class="topbar">
+  <div><div class="eyebrow">Information Systems</div><b>Introduction to AI for Business</b></div>
+  <button type="button" id="menu-btn" aria-expanded="false" aria-controls="rail">Contents</button>
+</header>
+
+<div class="shell">
+<aside class="rail" id="rail">
+  <div class="brand">
+    <div class="eyebrow">Information Systems · Topic</div>
+    <div class="title">Introduction to AI for Business</div>
+    <p class="sub">Human judgement, oversight and understanding<br><span>A standalone learning resource</span></p>
+  </div>
+  <nav aria-label="Module sections">
+    <div class="nav-group">Start here</div>
+    <a href="#start">Overview and learning journey</a>
+    <div class="nav-group">Human in the loop</div>
+    <a href="#part1">1 · Know it: the basics</a>
+    <a href="#part2">2 · Explain it: in, on, over, out</a>
+    <a href="#part3">3 · Apply it: where is the human?</a>
+    <a href="#part4">4 · Analyse it: how much autonomy?</a>
+    <a href="#part5">5 · Judge it: the jagged frontier</a>
+    <a href="#part6">6 · Design it: design the loop</a>
+    <div class="nav-group">Thinking well with AI</div>
+    <a href="#part7">7 · Know what you know</a>
+    <a href="#part8">8 · Using AI tools well</a>
+    <div class="nav-group">Reference</div>
+    <a href="#glossary">Key terms</a>
+    <a href="#sources">Sources and further reading</a>
+  </nav>
+  <div class="progressbox">
+    <strong id="progress-text">0 of 0 quick checks correct</strong>
+    <div class="track"><span id="progress-fill"></span></div>
+    <p>Ungraded practice. Answers and notes save in this browser only.</p>
+    <button type="button" class="btn small" id="reset">Reset my progress</button>
+  </div>
+</aside>
+
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="kicker">Information Systems · Introduction to AI · Business</div>
+      <h1>If AI can do it, should it do it alone?</h1>
+      <p>AI is now part of everyday business work: drafting, analysing, recommending and, increasingly, acting. This module helps you decide what to delegate to AI, where people must stay involved, who is accountable, and how to keep your own understanding real when AI makes everything feel easy.</p>
+      <ul class="meta-row"><li>8 parts</li><li>About 3½–4 hours</li><li>No technical background assumed</li><li>Ungraded quick checks</li></ul>
+    </div>
+    <div class="hero-badge" aria-hidden="true">
+      <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#231f20" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"><circle cx="64" cy="52" r="20" fill="#ffe600"/><path d="M30 122 C30 96 46 82 64 82 C82 82 98 96 98 122"/><rect x="118" y="48" width="58" height="48" rx="6" fill="#fff"/><circle cx="136" cy="72" r="5" fill="#231f20"/><circle cx="158" cy="72" r="5" fill="#231f20"/><path d="M147 48 V34"/><circle cx="147" cy="30" r="5" fill="#ffe600"/><path d="M120 122 H174"/><path d="M98 104 C108 92 112 92 120 100" stroke-dasharray="2 10"/></svg>
+    </div>
+  </div>
+
+  <div class="journey">
+    <div class="journey-label">The learning journey</div>
+    <ol class="journey-strip">
+      <li><a href="#part1"><span>01</span><b>Know it</b><small>Learn the core ideas</small></a></li>
+      <li><a href="#part2"><span>02</span><b>Explain it</b><small>In, on, over and out of the loop</small></a></li>
+      <li><a href="#part3"><span>03</span><b>Apply it</b><small>Classify real arrangements</small></a></li>
+      <li><a href="#part4"><span>04</span><b>Analyse it</b><small>What decides AI autonomy?</small></a></li>
+      <li><a href="#part5"><span>05</span><b>Judge it</b><small>The jagged frontier case</small></a></li>
+      <li><a href="#part6"><span>06</span><b>Design it</b><small>Design your own loop</small></a></li>
+      <li><a href="#part7"><span>07</span><b>Know what you know</b><small>The illusion of understanding</small></a></li>
+      <li><a href="#part8"><span>08</span><b>Use AI tools well</b><small>Modes, tokens, legal basics</small></a></li>
+    </ol>
+  </div>
+
+  <div class="content">
+
+  <!-- ================= START ================= -->
+  <section id="start" class="block">
+    <div class="kicker">Start here</div>
+    <h2>This module in three statements</h2>
+    <ol class="statements">
+      <li>Organisations constantly decide whether to let AI act on its own, or to keep people involved to guide, monitor or approve its work.</li>
+      <li>This is not an all-or-nothing choice. There is a spectrum of oversight, and the right point on it depends on the risk, the consequences and the need for human judgement in each task.</li>
+      <li>For business graduates this is a core professional skill: capturing the speed and scale of AI without exposing the organisation to costly errors, ethical blind spots and accountability failures.</li>
+    </ol>
+
+    <div class="question-card">
+      <span class="tag">The question for this module</span>
+      <p>If AI can perform a task, does that mean we should let it perform the task by itself?</p>
+    </div>
+
+    <h3>The learning journey</h3>
+    <p>The six human-in-the-loop parts follow <strong>Bloom's taxonomy</strong>, a step-by-step framework for how learning deepens: from remembering core facts (<em>Know it</em>) and grasping their meaning (<em>Explain it</em>), to using them in practical scenarios (<em>Apply it</em>), breaking down complex problems (<em>Analyse it</em>), evaluating ideas critically (<em>Judge it</em>), and finally creating your own solutions (<em>Design it</em>). Parts 7 and 8 then turn the same lens on you: how to keep your own understanding real, and how to use AI tools well and lawfully.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Bloom's level</th><th>Part</th><th>By the end you can…</th></tr></thead>
+      <tbody>
+        <tr><td>1. Remember</td><td>Know it</td><td>Define human in, on, over and out of the loop.</td></tr>
+        <tr><td>2. Understand</td><td>Explain it</td><td>Explain how the four human–AI arrangements differ.</td></tr>
+        <tr><td>3. Apply</td><td>Apply it</td><td>Identify where the human is in unfamiliar AI-enabled situations.</td></tr>
+        <tr><td>4. Analyse</td><td>Analyse it</td><td>Examine risk, consequences, reversibility, reliability, context and accountability.</td></tr>
+        <tr><td>5. Evaluate</td><td>Judge it</td><td>Decide where the human should be, and justify it with evidence.</td></tr>
+        <tr><td>6. Create</td><td>Design it</td><td>Design how humans and AI should work together in a business process.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="card">
+      <h3>How this module works</h3>
+      <ul>
+        <li><strong>Work through it in order the first time,</strong> then use it as a reference. Each part shows a suggested time.</li>
+        <li><strong>Quick checks</strong> end most parts. Choose an answer to see the explanation. Nothing is graded.</li>
+        <li><strong>Scenarios and activities</strong> have a suggested answer you can reveal after you have tried them yourself.</li>
+        <li><strong>Your notes</strong> in the activities and the Design challenge save in this browser only. Use the download button to keep a copy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PART 1 ================= -->
+  <section id="part1" class="block">
+    <div class="kicker">Part 1 of 8 · Know it</div>
+    <h2>What is human in the loop, and why does it matter?</h2>
+    <div class="time">About 20 minutes</div>
+    <p class="lede">Learn the foundational concepts and vocabulary.</p>
+
+    <a class="video-card" href="https://www.youtube.com/watch?v=8U1fE5JWR3M" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true">▶</span>
+      <span><small>Watch first · YouTube · opens in a new tab</small><b>What is Human in the Loop (HITL)?</b><em>A short explainer that introduces the ideas below.</em></span>
+    </a>
+
+    <div class="grid-2">
+      <div class="card"><h4>Human-in-the-loop approach</h4><p>Combines machine efficiency with human intelligence and judgement. People stay actively involved to train, use, verify and refine AI outputs so quality, accuracy and context are maintained.</p></div>
+      <div class="card"><h4>Responsible AI</h4><p>Developing and using AI to benefit society and individuals while actively minimising harm and unintended consequences.</p></div>
+      <div class="card"><h4>Knowledge cut-off</h4><p>A model is trained on data only up to a certain date, so it is unaware of events, facts or updates after that point.</p></div>
+      <div class="card"><h4>AI hallucinations</h4><p>False, fabricated or inaccurate information produced by a model. Dangerous for factual or operational work (such as forecasting), though occasionally useful as creative inspiration.</p></div>
+    </div>
+
+    <h3>Human in the loop (HITL)</h3>
+    <p><strong>Human in the loop</strong> means that people remain actively involved in an AI-enabled process, rather than handing a task to AI and accepting whatever it produces. Humans may set goals, provide context, review outputs, exercise judgement, correct errors, make decisions and take responsibility for outcomes.</p>
+    <div class="question-card"><span class="tag">Carry this question through the module</span><p>What should we delegate to AI, what should remain with humans, and where should humans intervene?</p></div>
+    <div class="callout"><strong>Everyday example.</strong> You ask an AI assistant to draft an email, but you review and edit it before pressing Send. The AI does part of the work; you remain in the loop because the final action needs your judgement and approval.</div>
+    <details class="reveal"><summary>Think about it: if the AI sent the email itself and just told you afterwards, would you still be "in the loop"?</summary><p>No. Once the AI can complete the action before you review it, you are no longer a required step. At most you are monitoring after the fact, which is a different arrangement (you will meet it in Part 2 as human <em>on</em> the loop).</p></details>
+
+    <figure class="figure"><img src="assets/human-and-ai.jpg" alt="Illustration of a person working at a laptop alongside an AI assistant, with icons for people, security, fairness and approval" loading="lazy" width="1600" height="900"><figcaption>The goal is not to remove the human; it is to design the right relationship between human judgement and AI capability.</figcaption></figure>
+
+    <h3>Why it matters</h3>
+    <div class="grid-2">
+      <div class="tile"><span class="n">1</span><div><h4>AI can be wrong</h4><p>Outputs can be inaccurate, incomplete, biased or inappropriate, and they are delivered with the same confident fluency either way.</p></div></div>
+      <div class="tile"><span class="n">2</span><div><h4>Context and judgement matter</h4><p>AI may lack the organisational, social or ethical context needed for a good decision.</p></div></div>
+      <div class="tile"><span class="n">3</span><div><h4>More autonomy, different risks</h4><p>As AI moves from generating content to taking actions, oversight becomes more consequential. Errors stop being typos and become business events.</p></div></div>
+      <div class="tile"><span class="n">4</span><div><h4>Humans remain accountable</h4><p>Using AI does not remove our responsibility. You cannot take an algorithm to court or fire it; people and organisations answer for outcomes.</p></div></div>
+    </div>
+
+    <h3>The human is not automatically better</h3>
+    <p>Adding a person to a process does not magically fix it. Poorly designed oversight creates its own failure points.</p>
+    <div class="grid-3">
+      <div class="card"><h4>Cost and scalability</h4><p>If every AI decision needs human review, the process becomes slow and expensive, and loses the speed AI was meant to deliver.</p></div>
+      <div class="card"><h4>Human error and inconsistency</h4><p>People get tired, distracted, inconsistent and biased. Reviewing 500 AI outputs in an afternoon leads to approval fatigue.</p></div>
+      <div class="card"><h4>Privacy and security</h4><p>Human review can expose sensitive personal, financial or medical data to people who would not otherwise need to see it.</p></div>
+    </div>
+    <div class="callout"><strong>Human in the loop is not automatically "safer".</strong> The real question is whether the right person is involved at the right point, for the right reason. Picture signing off 200 automated expense claims at 4:55pm on a Friday: is that oversight, or a human rubber stamp?</div>
+
+    <h3>Why put humans in the loop?</h3>
+    <div class="grid-3">
+      <div class="card"><h4>Accuracy and reliability</h4><p>People can spot unusual cases, errors and outputs that look plausible but make no practical sense.</p></div>
+      <div class="card"><h4>Ethics and accountability</h4><p>People can apply contextual and ethical judgement where decisions affect others or involve competing interests.</p></div>
+      <div class="card"><h4>Transparency and control</h4><p>Human review creates chances to question, override and document AI-supported decisions, and someone who can explain them.</p></div>
+    </div>
+    <p class="example"><strong>Example: AI-assisted recruitment.</strong> An AI system can summarise and screen a thousand applications in seconds, but a person should examine its recommendations, look for inappropriate patterns and take responsibility for the final decision. The AI assists the sorting; the human owns the decision.</p>
+
+    <h3>So what? Three words for every AI workflow</h3>
+    <div class="trio">
+      <div><b>Autonomy</b><span>What can the AI do by itself? Recommend, decide, or actually act without asking?</span></div>
+      <div><b>Oversight</b><span>Where and how do humans stay involved? Approve every action, monitor, intervene only when needed, or set the rules?</span></div>
+      <div><b>Accountability</b><span>Who is responsible for the outcome if the AI makes a mistake or causes harm?</span></div>
+    </div>
+    <p>Too much human intervention removes the efficiency and scale that make AI valuable. Too little exposes the organisation to errors, inappropriate decisions, privacy breaches and bias. The "loop" vocabulary in Part 2 gives you a precise way to describe where you have set that balance.</p>
+
+    <h3>From simple assistance to greater autonomy</h3>
+    <ol class="ladder">
+      <li><b>Chat assistants</b><span>AI suggests → you decide whether it is useful.</span></li>
+      <li><b>Vibe coding</b><span>AI builds an app or code → you test and evaluate whether it works and is safe.</span></li>
+      <li><b>AI workflows</b><span>AI completes several connected steps → you decide where a person must check the process.</span></li>
+      <li><b>AI agents</b><span>AI plans and takes actions itself → you set its autonomy, its limits and when it must ask a person.</span></li>
+    </ol>
+    <p>The important question is not only "What can the AI do?" It is also <strong>"What should the AI be allowed to do, and where must human judgement remain?"</strong></p>
+
+    <h3>Related concepts</h3>
+    <dl class="defs">
+      <dt>Human–AI collaboration</dt><dd>How work is divided between people and AI according to what each does well.</dd>
+      <dt>Augmentation vs automation</dt><dd>Is AI supporting human work, or performing work that people used to do?</dd>
+      <dt>Meaningful human control</dt><dd>More than having a person somewhere in the process. The person needs enough information, authority, competence and opportunity to intervene for their oversight to be real.</dd>
+      <dt>AI autonomy</dt><dd>How far a system can pursue goals, make intermediate decisions and take actions without a human prompt at every step. Central once you reach agentic AI.</dd>
+    </dl>
+
+    <div class="activity">
+      <span class="tag">Quick recall</span>
+      <label for="note-recall">In one clear sentence: what does "human in the loop" mean?</label>
+      <textarea id="note-recall" data-save="recall" rows="3" placeholder="Write your sentence before revealing the model answer…"></textarea>
+      <details class="reveal"><summary>Show a model answer</summary><p>Human in the loop means that a person must actively review, judge or approve an AI output or action before the process can be completed.</p></details>
+    </div>
+
+    <div class="qc" data-qc="part1"><div class="qc-head"><h3>Quick check: Part 1</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+  </section>
+
+  <!-- ================= PART 2 ================= -->
+  <section id="part2" class="block">
+    <div class="kicker">Part 2 of 8 · Explain it</div>
+    <h2>In, on, over and out of the loop</h2>
+    <div class="time">About 25 minutes</div>
+    <p class="lede">Understand and explain the different human–AI relationships.</p>
+
+    <figure class="figure"><img src="assets/parenting-analogy.jpg" alt="Human in, on, over and out of the loop, shown as a parenting analogy: walking with your robot child to school, watching from a distance, setting rules and checking, and not being involved at all" loading="lazy" width="1536" height="1024"><figcaption><strong>A parenting analogy.</strong> In: you walk to school together. On: you watch and can step in. Over: you set the rules and check periodically. Out: no meaningful involvement. The analogy is useful, but remember AI systems are not children: they have no judgement or responsibility of their own, so accountability stays with the people and organisations that design, deploy and govern them.</figcaption></figure>
+
+    <a class="video-card" href="https://www.youtube.com/watch?v=9iS-YYLIXiw&amp;t=98s" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true">▶</span>
+      <span><small>Watch · YouTube · opens in a new tab</small><b>What is Human in the Loop with AI? How HITL shapes AI systems</b><em>How human involvement enters an AI system at different stages.</em></span>
+    </a>
+
+    <h3>The spectrum of human involvement</h3>
+    <div class="spectrum-label"><span>More human control</span><span>More AI autonomy</span></div>
+    <div class="table-wrap"><table class="spectrum-table">
+      <thead><tr><th>Arrangement</th><th>What it means</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><b>Human in the loop (HITL)</b></td><td>AI performs part of the task, but a human must review, decide or approve before it proceeds. The system halts and waits.</td><td>An AI drafts an email to a client. You check the facts, tone and wording before clicking Send.</td></tr>
+        <tr><td><b>Human on the loop (HOTL)</b></td><td>AI operates largely independently while a human monitors it and can intervene or stop it.</td><td>An AI customer-service agent handles routine enquiries. A staff member watches conversations and takes over difficult cases.</td></tr>
+        <tr><td><b>Human over the loop</b></td><td>Humans set the rules, permissions and boundaries within which the AI operates, and govern the system rather than individual decisions.</td><td>A company lets an AI agent schedule meetings but prohibits it from approving expenses or sharing confidential documents.</td></tr>
+        <tr><td><b>Human out of the loop (HOOTL)</b></td><td>AI completes the task without routine human review or intervention.</td><td>Your email service moves obvious spam to the junk folder without asking you.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="flow-strip">
+      <div><b>HITL</b>AI recommends → human decides → action</div>
+      <div><b>HOTL</b>AI decides and acts → human monitors and can intervene</div>
+      <div><b>Over</b>Human sets the rules → AI decides and acts within them</div>
+      <div><b>HOOTL</b>AI decides and acts → no routine human involvement</div>
+    </div>
+
+    <figure class="figure"><img src="assets/loop-flows.jpg" alt="Flow diagrams for HITL, HOTL, human over the loop and HOOTL, showing where the human sits between the AI system and other systems or customers" loading="lazy" width="1600" height="879"><figcaption>Where the human sits in each arrangement, from approving every action (top) to no routine involvement (bottom).</figcaption></figure>
+
+    <figure class="figure"><img src="assets/human-involvement-spectrum.jpg" alt="Human involvement in AI: four columns from human in the loop to human out of the loop, each with an example" loading="lazy" width="1536" height="1024"><figcaption>Different levels of human involvement, from active participation to full automation.</figcaption></figure>
+
+    <h3>Worked examples</h3>
+    <figure class="figure"><img src="assets/study-planner-example.jpg" alt="Four panels showing a student and an AI study-planning app under each arrangement" loading="lazy" width="1600" height="697"><figcaption>An AI study-planning app under each arrangement.</figcaption></figure>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>An AI study-planning app</th><th>AI handling assessment-extension requests at a university</th></tr></thead>
+      <tbody>
+        <tr><td><b>HITL</b></td><td>The AI recommends a timetable; the student reviews it and decides whether to follow it.</td><td>The AI reviews each request and recommends a decision; a staff member decides, then the outcome is recorded.</td></tr>
+        <tr><td><b>HOTL</b></td><td>The AI creates and adjusts the timetable automatically; the student checks progress and steps in if it becomes unrealistic.</td><td>The AI decides and updates the record automatically; a staff member monitors and can intervene in unusual cases.</td></tr>
+        <tr><td><b>Over</b></td><td>The student sets the rules (available hours, class times, breaks); the AI works within them.</td><td>Staff set the rules (maximum length, acceptable evidence, when to escalate); the AI decides within them.</td></tr>
+        <tr><td><b>HOOTL</b></td><td>The AI creates and changes the timetable with no routine student review.</td><td>The AI approves or rejects requests with no routine staff review, unless a student later challenges a decision.</td></tr>
+      </tbody>
+    </table></div>
+
+    <figure class="figure"><img src="assets/it-service-desk.jpg" alt="IT service desk scenario: an employee requests access to new software, shown under HITL, HOTL, human over the loop and HOOTL" loading="lazy" width="1536" height="962"><figcaption><strong>An IT service desk.</strong> HITL: IT staff approve each access request. HOTL: the AI grants low-risk access while staff monitor and can reverse it. Over: managers decide what the AI may do (reset passwords, grant standard software) and what it may not (administrator rights, confidential systems). HOOTL: the AI unlocks a locked account automatically once predefined conditions are met.</figcaption></figure>
+
+    <h3>Where humans enter the AI lifecycle</h3>
+    <p>Human involvement is not only a final sign-off. People shape AI at three stages.</p>
+    <div class="grid-3">
+      <div class="card"><h4>Training time (knowledge)</h4><p>People provide correct "ground-truth" labels, and active learning directs their effort to edge cases and low-confidence examples.</p></div>
+      <div class="card"><h4>Tuning time (judgement)</h4><p>In reinforcement learning from human feedback (RLHF), people rank responses to teach the model to be helpful, harmless and honest.</p></div>
+      <div class="card"><h4>Run time (guardrails)</h4><p>Where business workflows live: <strong>confidence thresholds</strong> route uncertain outputs to people, <strong>approval gates</strong> stop high-impact actions until authorised, and <strong>escalation queues</strong> flag complex exceptions.</p></div>
+    </div>
+    <div class="callout"><strong>The trust curve.</strong> Systems often start with strict human approval (HITL) to learn and establish guardrails, then move towards monitoring (HOTL) or more autonomy as reliability is proven, while the trade-offs of human involvement (throughput bottlenecks and inconsistent reviewers) remain.</div>
+
+    <div class="activity">
+      <span class="tag">Explain it · 2 minutes</span>
+      <label for="note-explain">What is the difference between human <em>in</em> the loop and human <em>on</em> the loop? Explain it without using the words "in" or "on".</label>
+      <textarea id="note-explain" data-save="explain" rows="3" placeholder="Hint: does the AI need a person's approval before it acts?"></textarea>
+      <details class="reveal"><summary>Show a model answer</summary><p>In the first, a person's involvement is required before the AI completes each important action. In the second, the AI acts independently while a person monitors it and can intervene when necessary. The key distinction: does the AI require human approval <em>before</em> it acts?</p></details>
+    </div>
+
+    <div class="qc" data-qc="part2"><div class="qc-head"><h3>Quick check: Part 2</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+  </section>
+
+  <!-- ================= PART 3 ================= -->
+  <section id="part3" class="block">
+    <div class="kicker">Part 3 of 8 · Apply it</div>
+    <h2>Where is the human?</h2>
+    <div class="time">About 15 minutes</div>
+    <p class="lede">Use the concepts to classify unfamiliar AI arrangements.</p>
+
+    <div class="split">
+      <figure class="figure"><img src="assets/where-is-the-human.jpg" alt="A robot holding a checklist of in the loop, on the loop, over the loop and out of the loop, asking where is the human?" loading="lazy" width="1536" height="1024"></figure>
+      <div>
+        <p>For each situation, ask two questions:</p>
+        <ol>
+          <li>Does the AI need a person's approval <strong>before</strong> it acts?</li>
+          <li>If not, is a person <strong>actively watching</strong> and able to step in, only <strong>setting the rules</strong>, or <strong>not involved</strong> at all?</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="qc" data-qc="part3"><div class="qc-head"><h3>Classify the arrangement</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+
+    <div class="activity">
+      <span class="tag">Fill in the gaps</span>
+      <p>Cover the labels: can you name each arrangement and what the parent is doing?</p>
+      <figure class="figure"><img src="assets/parenting-analogy-gaps.jpg" alt="The parenting analogy with the arrangement names and descriptions blanked out for you to fill in" loading="lazy" width="1535" height="1025"></figure>
+      <details class="reveal"><summary>Show the answers</summary><p><strong>In</strong> the loop: you do it with them, part of every decision. <strong>On</strong> the loop: you watch them do it and can intervene if needed. <strong>Over</strong> the loop: you set the rules and check periodically; you govern the system with rules and review. <strong>Out</strong> of the loop: you are not involved; no meaningful human involvement.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= PART 4 ================= -->
+  <section id="part4" class="block">
+    <div class="kicker">Part 4 of 8 · Analyse it</div>
+    <h2>What should decide how much autonomy AI gets?</h2>
+    <div class="time">About 35 minutes</div>
+    <p class="lede">The level of autonomy should depend on the task, not just on what the AI is technically capable of.</p>
+
+    <figure class="figure narrow"><img src="assets/remove-the-human.jpg" alt="Would you ever remove the human completely? Factors: risk, consequences, reversibility, reliability and judgement" loading="lazy" width="1488" height="1184"></figure>
+
+    <div class="grid-3">
+      <div class="tile"><span class="n">1</span><div><h4>Risk</h4><p>What happens if the AI gets it wrong?</p></div></div>
+      <div class="tile"><span class="n">2</span><div><h4>Consequences</h4><p>Who or what could be affected, and how badly?</p></div></div>
+      <div class="tile"><span class="n">3</span><div><h4>Reversibility</h4><p>Can an incorrect action be easily undone?</p></div></div>
+      <div class="tile"><span class="n">4</span><div><h4>Reliability</h4><p>How confident are we in the AI's performance on this task?</p></div></div>
+      <div class="tile"><span class="n">5</span><div><h4>Context</h4><p>Is human judgement needed for unusual or ambiguous cases?</p></div></div>
+      <div class="tile"><span class="n">6</span><div><h4>Accountability</h4><p>Who is responsible for the outcome?</p></div></div>
+    </div>
+    <div class="big-statement">The higher the risk, consequences, uncertainty and need for judgement, the stronger the case for meaningful human involvement.</div>
+    <p class="example"><strong>For example:</strong> an AI system could reasonably reschedule an internal team meeting on its own, because a mistake is low-risk and easy to fix. Rejecting a job applicant affects someone's livelihood and raises fairness, discrimination and legal concerns, so it calls for meaningful human review and approval, even though both systems are technically capable of acting alone.</p>
+
+    <h3>Three scenarios to analyse</h3>
+    <p>Read each scenario, answer the questions in your own words, then compare with the suggested answer.</p>
+
+    <article class="scenario">
+      <span class="tag">Scenario 1 · Fictional</span>
+      <h4>Horizon Bank's AI lending system</h4>
+      <p>Horizon Bank introduces an AI system to help process personal loan applications. It analyses each applicant's information and relevant financial data and produces a recommended decision and risk assessment.</p>
+      <p><strong>Stage 1.</strong> For three months, every recommendation goes to a lending officer, who approves or rejects the application. The AI cannot communicate or implement a decision until the officer has decided.</p>
+      <p><strong>Stage 2.</strong> Reviewing everything is slowing processing, so applications the AI classes as low risk are now approved automatically. A team actively monitors the automated decisions as they happen and can suspend automation, reverse decisions or move applications to manual assessment.</p>
+      <p><strong>Stage 3.</strong> Twelve months later, continuous monitoring stops. A Responsible Lending Committee sets which loan categories may be automated, lending limits, performance thresholds and mandatory escalation criteria. It audits the system periodically and can change or suspend it.</p>
+      <ol class="questions"><li>Which human-control model operates at each stage?</li><li>For each stage, what is the human actually doing that led you to that classification?</li><li>What changed about where human control sits from Stage 1 to Stage 3?</li></ol>
+      <textarea data-save="s1" rows="4" aria-label="Your notes on Scenario 1" placeholder="Your notes…"></textarea>
+      <details class="reveal"><summary>Show a suggested answer</summary>
+        <p><strong>Stage 1: in the loop.</strong> The officer must decide before anything is implemented (deciding and approving). <strong>Stage 2: on the loop.</strong> Low-risk loans are approved automatically while a team watches in real time and can intervene (supervising). <strong>Stage 3: over the loop.</strong> Individual decisions are no longer supervised; the committee governs through rules, limits, thresholds, escalation criteria and audits (governing).</p>
+        <p>Human control moved progressively further from each individual decision: in → on → over. AI autonomy grew from recommending only, to acting under active supervision, to acting under higher-level governance.</p>
+      </details>
+    </article>
+
+    <article class="scenario">
+      <span class="tag">Scenario 2 · Fictional</span>
+      <h4>SwiftMart's AI customer-service agent</h4>
+      <p>SwiftMart deploys a generative AI agent for online customer enquiries.</p>
+      <ul>
+        <li>It answers routine questions (opening hours, product availability, delivery tracking) automatically. No employee reviews or monitors these.</li>
+        <li>For refunds <strong>over $100</strong>, it gathers information and recommends a decision; an employee must decide before any refund is issued.</li>
+        <li>For refunds of <strong>$100 or less</strong>, it decides and issues the refund itself. A supervisor monitors these on a live dashboard and can reverse decisions or pause automation.</li>
+        <li>Separately, an AI Governance Committee decides what may be automated, the maximum automated refund, prohibited uses and when to escalate. It audits periodically but does not supervise individual interactions.</li>
+      </ul>
+      <ol class="questions"><li>Which model operates for (a) routine enquiries, (b) refunds over $100 and (c) refunds of $100 or less?</li><li>How does the supervisor's role differ from the Governance Committee's?</li><li>How can several models operate at the same time in one process?</li></ol>
+      <textarea data-save="s2" rows="4" aria-label="Your notes on Scenario 2" placeholder="Your notes…"></textarea>
+      <details class="reveal"><summary>Show a suggested answer</summary>
+        <p>(a) Routine enquiries: <strong>out of the loop</strong>. (b) Refunds over $100: <strong>in the loop</strong>. (c) Refunds of $100 or less: <strong>on the loop</strong>. The Governance Committee is <strong>over the loop</strong> at system level.</p>
+        <p>The supervisor is operationally close: watching automated decisions and able to intervene (on). The committee does not supervise transactions; it sets rules, boundaries, permitted uses and escalation conditions, and audits (over).</p>
+        <p>Identify the model for a particular decision or layer of control, not for the whole technology. One business process can contain out, in, on and over simultaneously.</p>
+      </details>
+    </article>
+
+    <article class="scenario">
+      <span class="tag">Scenario 3 · Fictional</span>
+      <h4>TalentMatch AI recruitment</h4>
+      <p>A multinational consulting firm introduces TalentMatch, an AI recruitment system for its graduate program. At first it recommends which applicants should progress, and recruiters review every recommendation and make the final decision.</p>
+      <p>After a trial, TalentMatch automatically rejects applicants below one threshold and progresses those above another. Applicants in between are still reviewed by recruiters. Nobody actively monitors the automated decisions; instead the HR governance team runs regular audits, decides what information TalentMatch may use, sets the thresholds, reviews outcomes and can change or suspend the system.</p>
+      <p>One morning, a faulty software update makes TalentMatch reject <strong>3,200 applicants</strong> using the wrong threshold. Because nobody is watching the automated decisions, the problem isn't found until the next governance review.</p>
+      <ol class="questions"><li>Which model applies to (a) the original process, (b) intermediate applicants after the redesign and (c) automatically processed applicants after the redesign?</li><li>Why is the HR governance team's role "over" rather than "on" the loop?</li><li>Would you change the form of human control for the automated decisions? Which model would you add, and why?</li></ol>
+      <textarea data-save="s3" rows="4" aria-label="Your notes on Scenario 3" placeholder="Your notes…"></textarea>
+      <details class="reveal"><summary>Show a suggested answer</summary>
+        <p>(a) <strong>In the loop</strong>: recruiters decide every case. (b) <strong>In the loop</strong>: intermediate cases still need a recruiter. (c) Automated without prior approval or active supervision, but under <strong>over-the-loop</strong> governance.</p>
+        <p>The HR team is not watching decisions as they happen or positioned to intervene in real time. It sets rules and boundaries, reviews aggregate outcomes and audits: governance, so "over".</p>
+        <p>A strong response keeps the governance but adds <strong>on-the-loop</strong> monitoring, for example alerts when rejection rates or score distributions suddenly change, with a person able to pause automation. Ambiguous or exceptional cases could also be escalated to in-the-loop review. Over-the-loop governance is not wrong in itself; the problem is that periodic review alone let 3,200 consequential errors pile up before anyone noticed.</p>
+      </details>
+    </article>
+
+    <div class="key-takeaway">
+      <span class="tag">Key takeaway</span>
+      <ul>
+        <li><strong>IN</strong>: the human participates in or approves the decision.</li>
+        <li><strong>ON</strong>: the AI acts autonomously while a human actively supervises and can intervene.</li>
+        <li><strong>OVER</strong>: the AI acts autonomously while humans govern the system through rules, audits, constraints and accountability.</li>
+        <li><strong>OUT</strong>: the AI acts without meaningful human review or intervention in that process.</li>
+      </ul>
+      <p><strong>The unit of analysis matters.</strong> Don't label a whole AI system as simply in, on, over or out. First identify the specific decision, action or level of control you are examining; different parts of one process can use different models at the same time.</p>
+    </div>
+
+    <h3>In practice: Australian industry</h3>
+    <p>Leading Australian organisations treat "unsupervised speed" as a liability. Three examples show how they place people across the spectrum.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Model</th><th>Typical business posture</th></tr></thead>
+      <tbody>
+        <tr><td><b>HITL</b></td><td>Mandatory for high-stakes, irreversible or regulated actions, such as credit refusals or deploying code to production.</td></tr>
+        <tr><td><b>HOTL</b></td><td>Standard for medium-risk, high-volume tasks, such as real-time fraud-alert triage or scaling cloud systems.</td></tr>
+        <tr><td><b>HOOTL</b></td><td>Restricted to low-risk, reversible internal tasks, such as tagging tickets or generating meeting summaries.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="grid-3">
+      <div class="card case-card">
+        <h4>Atlassian: guardrails, not promises</h4>
+        <p>Atlassian's guidance for AI agents in Jira and Rovo argues that a guardrail must be enforced by the system the agent works in, not left to the agent to honour, because instructions can be forgotten, misread or overridden. Tasks are split by <strong>consequence</strong> and <strong>reversibility</strong>: low-stakes, reversible work (release notes, tidying tags, summarising feedback) runs autonomously; high-stakes, irreversible work (deploying to production, deleting databases, spending budget) is locked behind a human approval gate.</p>
+      </div>
+      <div class="card case-card">
+        <h4>Macquarie Bank: AI as first responder</h4>
+        <p>When banking platforms have an outage, every minute matters. Macquarie's reliability engineers, working with the monitoring platform Dynatrace, use AI to scan huge volumes of logs and alerts and isolate probable root causes, "with a human in the loop to help guide the triage process". The machine does the analytical heavy lifting; engineers make the final call on the fix.</p>
+      </div>
+      <div class="card case-card">
+        <h4>Commonwealth Bank: human judgement as the anchor</h4>
+        <p>CBA's chief executive Matt Comyn has framed AI as a test of trust: whether customers see safer payments, faster help and better decisions "backed by human judgement". Models intercept scam payments and flag money-laundering anomalies in milliseconds, while complex resolutions and credit disputes stay with people who can weigh hardship and vulnerability.</p>
+      </div>
+    </div>
+    <div class="callout"><strong>Consequence vs reversibility.</strong> Consequence asks how severe the damage to money, safety or trust could be if the AI is wrong. Reversibility asks how hard or expensive it would be to undo. Low consequence and easy to undo: the agent may act. High stakes or permanent: an unskippable human checkpoint.</div>
+
+    <h3>The rubber-stamp trap</h3>
+    <p>A name on a process map is not oversight. Imagine an analyst reviewing an automated fraud queue who must process 60 cases an hour: one minute per case. Three predictable failures follow:</p>
+    <div class="grid-3">
+      <div class="card"><h4>Automation bias</h4><p>A precise score such as "98.4% fraud probability" invites deference rather than investigation.</p></div>
+      <div class="card"><h4>Misaligned KPIs</h4><p>If reviewers are judged on speed, not error detection, they are paid to click "Approve".</p></div>
+      <div class="card"><h4>Rubber-stamping</h4><p>The person is no longer a control, just an exhausted, expensive step in an automated machine.</p></div>
+    </div>
+    <p>If harm follows, leaders cannot hide behind "a human approved it". When the design made genuine review impossible, responsibility sits with the leadership and the system design.</p>
+
+    <h3>Three rules for future business leaders</h3>
+    <ol class="rules">
+      <li><b>Gate what you cannot undo.</b> If an action cannot be cleanly reversed (terminating a contract, closing an account, publishing sensitive data), build an unskippable human approval gate into the workflow.</li>
+      <li><b>Never measure reviewers on volume alone.</b> Reward people who catch subtle errors. Meaningful oversight needs productive "cognitive friction": time and context to question the machine.</li>
+      <li><b>AI is the analyst; the human is the executive.</b> Let models process data, summarise documents and detect weak signals. Keep discretionary, ethical and empathetic decisions with people who carry accountability.</li>
+    </ol>
+
+    <figure class="figure"><img src="assets/workflow-checkpoints.jpg" alt="Four workflow rows showing the human checkpoint placed at different stages of the same process" loading="lazy" width="1536" height="1024"><figcaption>"Human in the loop" is not one fixed architecture. It is a design question: where do human knowledge, judgement and authority enter an AI-enabled process?</figcaption></figure>
+
+    <div class="qc" data-qc="part4"><div class="qc-head"><h3>Quick check: Part 4</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+  </section>
+
+  <!-- ================= PART 5 ================= -->
+  <section id="part5" class="block">
+    <div class="kicker">Part 5 of 8 · Judge it · Case study</div>
+    <h2>Navigating the jagged technological frontier</h2>
+    <div class="time">About 35 minutes, plus an optional video</div>
+    <p class="lede">Evidence that AI can improve performance on some tasks and make it worse on others, and what that means for meaningful human control.</p>
+
+    <div class="callout"><strong>Why read this case?</strong> Before you can design a human–AI arrangement in Part 6, you need to understand the opportunities and risks of AI in knowledge work. This case is not a model answer for every process; it helps you recognise the risks, responsibilities and kinds of human involvement you will need to judge.</div>
+
+    <h3>The study</h3>
+    <p>Researchers from Harvard Business School and colleagues partnered with Boston Consulting Group (BCG) to run a <strong>field experiment</strong>: a study in a realistic work setting. <strong>758 consultants</strong> completed realistic consulting tasks after a baseline skills test, and were randomly assigned to one of three groups:</p>
+    <div class="grid-3">
+      <div class="card"><h4>No AI</h4><p>The control group, using their own expertise and normal tools.</p></div>
+      <div class="card"><h4>GPT-4 access</h4><p>Free to use the model however they chose.</p></div>
+      <div class="card"><h4>GPT-4 plus prompt guidance</h4><p>Model access plus an overview of prompt-engineering strategies.</p></div>
+    </div>
+    <p>Because assignment was random, differences between the groups can be attributed to AI access rather than to one group being more skilled.</p>
+
+    <h3>What is the jagged frontier?</h3>
+    <p>The "technological frontier" is the boundary between tasks an AI can do reliably and tasks it cannot. It is <strong>jagged</strong> because the boundary is uneven: capability does not decline smoothly from easy to hard tasks. An AI may excel at generating ten product ideas but stumble when comparing interview notes with a spreadsheet to find one subtle contradiction, even though the second task looks more structured. And you often cannot tell in advance which side of the frontier a task is on, because the answer sounds equally polished either way.</p>
+
+    <div class="grid-2">
+      <div class="stat-card good">
+        <span class="tag">Inside the frontier</span>
+        <h4>When AI helped</h4>
+        <p>On 18 creative and analytical tasks (product ideas, segmentation, marketing copy, roll-out plans), consultants using AI completed <strong>12.2% more tasks</strong>, <strong>about 25% faster</strong>, with quality rated <strong>roughly 32% higher</strong> by independent evaluators.</p>
+      </div>
+      <div class="stat-card bad">
+        <span class="tag">Outside the frontier</span>
+        <h4>When AI made it worse</h4>
+        <p>On a deceptively tricky brand-strategy task, the spreadsheet suggested an obvious answer but a clue in the interview notes overturned it. Correct answers: <strong>84.5% without AI</strong>, <strong>70.6% with AI</strong>, and about <strong>60% with AI plus prompt guidance</strong>.</p>
+      </div>
+    </div>
+    <p>What went wrong? The AI processed the surface-level numbers, produced a fluent, confident recommendation and missed the subtle insight. Because it sounded so authoritative, many consultants stopped cross-checking the sources and accepted the flawed analysis. Polished language made incorrect reasoning harder to notice.</p>
+
+    <h3>Centaurs and cyborgs</h3>
+    <p>The researchers saw two natural styles of working with AI. Neither is better in general; each fails in its own way.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Dimension</th><th>Centaur</th><th>Cyborg</th></tr></thead>
+      <tbody>
+        <tr><td><b>Core idea</b></td><td>A clear division of labour. Human and AI handle separate parts of the task.</td><td>Continuous integration. Human and AI work in a tight back-and-forth loop.</td></tr>
+        <tr><td><b>Pattern</b></td><td>Sequential hand-offs: frame the problem, delegate a block to AI, step back in to audit, write the final output yourself.</td><td>Iterative micro-cycles: draft, ask for sharper phrasing, push back, add a constraint, refine line by line.</td></tr>
+        <tr><td><b>Advantage</b></td><td>Transparency and auditability; it is clear who did what.</td><td>Rapid creative exploration, nuance and adaptability.</td></tr>
+        <tr><td><b>Failure mode</b></td><td>Treating the AI's deliverable as a trusted black box.</td><td>Cognitive drift: swept up in the flow, forgetting to check whether the larger argument holds.</td></tr>
+        <tr><td><b>Best fit</b></td><td>Structured analysis, initial data clustering, boilerplate drafting, distinct research sweeps.</td><td>Complex argument, persuasive writing, creative synthesis, ambiguous problem framing.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="example">Think of the centaur as working with a specialist subcontractor, and the cyborg as jamming at a whiteboard with a clever colleague.</p>
+
+    <h3>The skill-equalising effect</h3>
+    <p>Consultants in the lower half of the baseline skills test improved their quality by roughly <strong>31%</strong> with AI; those in the top half improved by about <strong>11%</strong>. AI narrowed the gap between newer and more experienced workers. But experts remain better at sensing what is missing, spotting hidden flaws and taking accountability, and the finding raises a hard question: if AI does the entry-level work through which juniors used to build judgement, how will they learn?</p>
+
+    <h3>Falling asleep at the wheel</h3>
+    <p>A person can remain formally responsible while having stopped actively monitoring. That is what happened on the brand-strategy task: the human was present, but meaningful oversight had weakened. A 2026 pre-print argues the same risk grows as AI becomes more autonomous: people overseeing fast, complex processes face information overload, approval fatigue and reduced situational awareness, and long reliance on AI can erode the very skills oversight needs, such as vigilance, judgement and domain expertise. Effective oversight has to be designed in: clear chances to intervene, deliberate pauses at high-risk moments, independent checking, training and activities that preserve human expertise.</p>
+    <div class="big-statement">Human in the loop is meaningful only when people have the knowledge, attention, information, time and authority to question and override the AI.</div>
+
+    <div class="question-card"><span class="tag">Three questions for any AI workflow</span><ol><li>Where is the human in the process?</li><li>What can that person independently verify?</li><li>Do they have the authority and opportunity to reject the AI's recommendation?</li></ol></div>
+
+    <a class="video-card" href="https://www.youtube.com/watch?v=Yka2S-yTX70" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true">▶</span>
+      <span><small>Optional video · Insight Partners · YouTube · opens in a new tab</small><b>Navigating the jagged frontier of generative AI: Ethan Mollick and Lonne Jaffe</b><em>As you watch: which tasks does AI handle natively, where is human judgement still the differentiator, and how should organisations stay valuable as routine outputs get cheaper?</em></span>
+    </a>
+
+    <h3>Reflection questions</h3>
+    <p>Jot down brief notes. There is often more than one defensible answer, as long as you explain your reasoning.</p>
+    <ol class="reflect">
+      <li><b>Find your own frontier.</b> Name one task from your study or work where AI is likely to be useful, and one where it might give a convincing but unreliable answer. What makes them different? Give one way to check the second.<textarea data-save="r1" rows="3" aria-label="Reflection 1"></textarea></li>
+      <li><b>Was the human really in control?</b> The consultants could read the AI's output. Why might that not be enough? What should they have done before accepting it?<textarea data-save="r2" rows="3" aria-label="Reflection 2"></textarea></li>
+      <li><b>The trust trap.</b> The group with prompt-engineering guidance did worst on the tricky task. The study doesn't prove why. Why might guidance have increased confidence in a wrong answer? What safeguard would you add?<textarea data-save="r3" rows="3" aria-label="Reflection 3"></textarea></li>
+      <li><b>Choosing a workflow.</b> You are preparing a competitive market analysis for a client. Centaur, cyborg or a combination? Which tasks would AI do, which would you do, and where would you check?<textarea data-save="r4" rows="3" aria-label="Reflection 4"></textarea></li>
+      <li><b>Designing safeguards.</b> Choose two safeguards against over-reliance (for example checking original sources, a second analysis, someone challenging the recommendation, recording uncertainty, approval for high-consequence decisions). Why would they help?<textarea data-save="r5" rows="3" aria-label="Reflection 5"></textarea></li>
+      <li><b>The skill equaliser.</b> If AI helps lower performers more, what could happen to entry-level roles? What should organisations provide so juniors still develop judgement?<textarea data-save="r6" rows="3" aria-label="Reflection 6"></textarea></li>
+      <li><b>How much autonomy?</b> Choose one task from the case. Should it be in, on or over the loop, or have more AI autonomy within clear limits? Justify it using risk, uncertainty, consequences and the need for judgement.<textarea data-save="r7" rows="3" aria-label="Reflection 7"></textarea></li>
+    </ol>
+    <p class="note">These findings come from one experiment with specific consultants and tasks. Read them in the context of the original publication rather than generalising to every job, AI system or organisation.</p>
+
+    <div class="qc" data-qc="part5"><div class="qc-head"><h3>Quick check: Part 5</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+  </section>
+
+  <!-- ================= PART 6 ================= -->
+  <section id="part6" class="block">
+    <div class="kicker">Part 6 of 8 · Design it</div>
+    <h2>Design the loop</h2>
+    <div class="time">About 30 minutes</div>
+    <p class="lede">Design a human–AI arrangement for one business process, and justify how it keeps meaningful human control.</p>
+
+    <div class="callout"><strong>This is a thinking exercise.</strong> You are not building, training or implementing an AI system. You are planning how humans and AI should share one business process: what AI does, what people do, where responsibility stays with people, and how the design prevents inappropriate reliance on AI.</div>
+
+    <div class="card">
+      <h3>Using AI appropriately for this challenge</h3>
+      <p>Develop your own first proposal before asking an AI anything. Then use AI as a critical discussion partner: ask it to find weaknesses, suggest risks you missed, challenge your assumptions or help you check whether your arrangement keeps meaningful human control. Don't ask it to produce the design for you, and don't present its ideas as yours without evaluating and developing them. <strong>Use AI to test your thinking, not to replace it.</strong></p>
+    </div>
+
+    <h3>Your design</h3>
+    <p>Choose one business process you know: recruitment, marketing, HR, financial services, IT support, customer service, healthcare administration, education, procurement, legal services, logistics or sales. Then complete each field.</p>
+    <form class="design" id="design-form" onsubmit="return false">
+      <label>Business process (name it and give an example)<textarea data-save="d-process" rows="2"></textarea></label>
+      <label>Where the process begins<textarea data-save="d-start" rows="2"></textarea></label>
+      <label>The AI can…<textarea data-save="d-ai" rows="3"></textarea></label>
+      <label>A human must…<textarea data-save="d-human" rows="3"></textarea></label>
+      <label>The AI is NOT allowed to…<textarea data-save="d-not" rows="3"></textarea></label>
+      <label>The AI must hand over to a human when…<textarea data-save="d-handover" rows="3"></textarea></label>
+      <label>Arrangement: in, on, over or out of the loop (for which decisions?) and centaur, cyborg or a combination?<textarea data-save="d-model" rows="2"></textarea></label>
+      <label>I designed it this way because…<textarea data-save="d-why" rows="3"></textarea></label>
+      <div class="actions"><button type="button" class="btn dark" id="download-design">Download my design (.txt)</button><span class="note" id="design-note">Saved in this browser as you type.</span></div>
+    </form>
+
+    <details class="reveal worked"><summary>Show a worked example: AI-assisted customer service</summary>
+      <p><strong>Business process:</strong> responding to customer enquiries, such as a delayed order, a refund request or a complaint.</p>
+      <p><strong>The AI can:</strong> classify incoming enquiries; pick out the relevant details from the message; draft a suggested reply using approved knowledge-base content; flag enquiries that may need escalation.</p>
+      <p><strong>A human must:</strong> review the customer's situation and the AI's draft; check the reply is accurate, appropriate and fair; revise it where needed; approve and send it.</p>
+      <p><strong>The AI must not:</strong> issue refunds or compensation on its own; make exceptions to company policy; respond to complaints involving serious harm or legal threats; make decisions about vulnerable customers without human review.</p>
+      <p><strong>Hand over when:</strong> the AI is uncertain; the enquiry falls outside standard procedures; the customer seems distressed or vulnerable; or the decision could have significant financial or reputational consequences.</p>
+      <p><strong>Arrangement:</strong> human in the loop for every reply, and mainly a <em>centaur</em> workflow: the AI prepares and classifies, the human keeps judgement, approval and accountability.</p>
+      <p><strong>Why:</strong> it captures AI's efficiency while consequential decisions stay under meaningful human control.</p>
+    </details>
+
+    <div class="card">
+      <h3>Optional: pitch it in two minutes</h3>
+      <p>If you are working with others, present your design in two minutes, with at most two slides. Explain the process and why you chose it, the AI's role, the human's role, the boundaries, when a human must intervene, whether the workflow is centaur, cyborg or both, and how the whole arrangement keeps meaningful human control.</p>
+    </div>
+  </section>
+
+  <!-- ================= PART 7 ================= -->
+  <section id="part7" class="block">
+    <div class="kicker">Part 7 of 8 · Thinking well with AI</div>
+    <h2>Know what you know: the illusion of explanatory depth</h2>
+    <div class="time">About 30 minutes</div>
+    <p class="lede">Explain the illusion of explanatory depth and intellectual humility, see how AI tools make the problem bigger, and adopt habits that protect your learning.</p>
+
+    <div class="activity zipper" id="zipper">
+      <span class="tag">Activity · 6 minutes · work alone</span>
+      <div class="split">
+        <figure class="figure"><img src="assets/zipper.jpg" alt="Sketch of a person looking at a zipper: do you understand the zipper, or just use it?" loading="lazy" width="800" height="800"></figure>
+        <div>
+          <h3>How well do you know a zipper?</h3>
+          <p>Find a zipper on a bag, jacket or pencil case. Don't search online.</p>
+          <ol class="steps">
+            <li><label for="zip-before">How well do you understand how a zipper works? (1 = not at all, 7 = perfectly)</label>
+              <select id="zip-before" data-save="zip-before"><option value="">Choose…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></li>
+            <li><label for="zip-explain">Now write the full explanation. How does a zipper work, step by step? Take two minutes. Any language is fine.</label>
+              <textarea id="zip-explain" data-save="zip-explain" rows="5"></textarea></li>
+            <li><label for="zip-after">Rate yourself again, from 1 to 7.</label>
+              <select id="zip-after" data-save="zip-after"><option value="">Choose…</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></li>
+          </ol>
+          <p class="zip-result" id="zip-result" role="status"></p>
+        </div>
+      </div>
+      <details class="reveal"><summary>How a zipper actually works</summary>
+        <ol>
+          <li><strong>Every tooth has two parts:</strong> a hook on top and a hollow underneath.</li>
+          <li><strong>The slider is a Y-shaped channel.</strong> It pushes the two rows together at an angle, so each hook drops into the hollow of the tooth opposite.</li>
+          <li><strong>Pulling sideways keeps it shut.</strong> When the two sides are pulled apart, the force acts sideways on the teeth, not upwards, so they stay locked.</li>
+        </ol>
+        <p>Most people write "the two sides join together." That is a description, not an explanation.</p>
+      </details>
+    </div>
+
+    <h3>This is the illusion of explanatory depth</h3>
+    <p class="big-statement">We believe we understand things much better than we really do.</p>
+    <ol class="ladder three">
+      <li><b>I have seen it</b><span>✓ Easy.</span></li>
+      <li><b>I can use it</b><span>✓ Easy.</span></li>
+      <li><b>I can explain it</b><span>✕ The only real test. Nobody ever asks us to explain a zipper, so we never find out that we can't.</span></li>
+    </ol>
+    <p>Cognitive scientists <strong>Leonid Rozenblit and Frank Keil</strong> studied this at Yale in 2002. They asked people to rate how well they understood everyday objects such as a zipper or a lock, then to write a full explanation, then to rate themselves again. Ratings dropped, again and again, across many objects.</p>
+    <a class="video-card" href="https://www.youtube.com/shorts/eUq3CGoTcHs" target="_blank" rel="noopener noreferrer">
+      <span class="play" aria-hidden="true">▶</span>
+      <span><small>Watch · YouTube Short · opens in a new tab</small><b>Rozenblit and Keil: the illusion of explanatory depth</b><em>A one-minute recap of the original study.</em></span>
+    </a>
+
+    <h3>Why does it happen?</h3>
+    <div class="grid-3">
+      <div class="card"><h4>Familiarity feels like understanding</h4><p>We see and use things every day, and familiarity slowly turns into a feeling of mastery.</p></div>
+      <div class="card"><h4>We borrow other people's knowledge</h4><p>You don't need to know how your phone's processor works, because engineers do. That's efficient, but we can't feel the border between our knowledge and theirs.</p></div>
+      <div class="card"><h4>Our memory compresses</h4><p>We remember the big idea, not the detailed steps, but the steps are where understanding lives.</p></div>
+    </div>
+
+    <h3>It's not only about objects</h3>
+    <p>The illusion also shapes opinions about economics, policy, healthcare and education. When people are asked to explain step by step how a policy would actually work, their confidence falls and their views become less extreme. They don't always change their conclusion, but they become more humble and more open to other views. That is <strong>intellectual humility</strong>: accuracy about the edges of your own knowledge. It's a professional skill, not a weakness.</p>
+    <figure class="figure narrow"><img src="assets/edge-of-knowledge.jpg" alt="A circle labelled what I know, with a solid edge labelled the edge I am sure about and a dashed edge labelled the edge I am not sure about" loading="lazy" width="948" height="626"><figcaption>Intellectual humility means knowing where the solid edge of your knowledge ends and the uncertain edge begins.</figcaption></figure>
+    <div class="grid-3">
+      <div class="card"><h4>It keeps the tool honest</h4><p>AI output is fluent whether or not it is right. If you assume you might be wrong, you read with attention; humility turns an answer into something you check.</p></div>
+      <div class="card"><h4>It keeps the learning real</h4><p>The illusion makes confidence rise faster than ability. Humility notices "I couldn't reproduce this without the screen."</p></div>
+      <div class="card"><h4>It's what makes you trustworthy</h4><p>"I don't know yet, let me find out" is what gets you relied on. Overstating what you understand fails at the first hard question.</p></div>
+    </div>
+
+    <h3>Why AI makes the illusion stronger</h3>
+    <div class="grid-2">
+      <div class="tile"><span class="n">1</span><div><h4>It sounds confident</h4><p>Clear, well-organised English feels correct, even when it's wrong.</p></div></div>
+      <div class="tile"><span class="n">2</span><div><h4>It is easy</h4><p>Struggling is how you normally notice what you don't know. AI removes the struggle, and with it the signal.</p></div></div>
+      <div class="tile"><span class="n">3</span><div><h4>It always has an answer</h4><p>You never reach the edge of your knowledge, so you never feel where it ends.</p></div></div>
+      <div class="tile"><span class="n">4</span><div><h4>The line blurs</h4><p>You stop noticing the difference between what you know and what the tool knows.</p></div></div>
+    </div>
+    <p>This applies to every tool. General assistants give fluent answers on any topic in seconds. Source-grounded tools (which answer from your own documents) feel already checked, so you question them less. Developer playgrounds full of settings and models can make you feel like an expert on a system you haven't looked inside. <strong>Different tools, same risk: the better the tool, the stronger the illusion.</strong></p>
+
+    <h3>What it means for study and work</h3>
+    <div class="callout"><strong>An assignment is not the test. You are.</strong> Reading a clear AI answer that matches what you were thinking feels like being ready. Your confidence goes up; your understanding doesn't move. You find out in the exam, the tutorial question, the interview: all closed-book, all asking you to explain. If you can't explain it without the screen, you haven't finished.</div>
+    <div class="grid-3">
+      <div class="card"><h4>In the meeting</h4><p>You hand in a report AI helped you write. Your manager asks one simple question about it. You can't answer. The report isn't being judged; you are.</p></div>
+      <div class="card"><h4>In front of the client</h4><p>You recommend a software system. Someone asks, "Why this one, and not the cheaper one?" You have no reasons of your own.</p></div>
+      <div class="card"><h4>When something breaks</h4><p>The system stops and customers are waiting. Everyone turns to the team that built it. Nobody, including you, understands how it was supposed to work.</p></div>
+    </div>
+    <p>For the organisation the damage compounds: nobody can check the work, the team never builds real understanding of its own systems, and trust is lost. <strong>Organisations don't pay graduates for answers. They pay for judgement.</strong></p>
+
+    <h3>Five habits that protect you</h3>
+    <ol class="habits">
+      <li><b>Write your own answer first.</b> Then ask AI.</li>
+      <li><b>Ask AI to test you.</b> "Ask me questions about this. Do not explain it to me."</li>
+      <li><b>Explain it to someone else</b> with your screen off. (The "explain it simply" test, sometimes called the Feynman technique: where you get stuck is exactly what you need to study.)</li>
+      <li><b>Draw it with no help.</b> Writing lets you stay vague; drawing doesn't. How many boxes? What goes in each? Where does each arrow go? The moment you can't continue is the edge of what you know. AI can draw it for you, but then you still can't draw it yourself.</li>
+      <li><b>Keep a short list:</b> "I used this, but I can't explain it yet."</li>
+    </ol>
+    <div class="activity">
+      <span class="tag">Commit to one</span>
+      <label for="habit">Pick one habit to use this week. Which one, and for what?</label>
+      <textarea id="habit" data-save="habit" rows="2"></textarea>
+    </div>
+    <div class="big-statement">AI makes your confidence grow faster than your understanding. That gap is your risk, at home, at university and at work.</div>
+
+    <div class="qc" data-qc="part7"><div class="qc-head"><h3>Quick check: Part 7</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+  </section>
+
+  <!-- ================= PART 8 ================= -->
+  <section id="part8" class="block">
+    <div class="kicker">Part 8 of 8 · Thinking well with AI</div>
+    <h2>Using AI tools well</h2>
+    <div class="time">About 30 minutes</div>
+    <p class="lede">Choose the right tool and mode for the task, use your AI allowance purposefully, and understand the basic legal risks of what you put in and take out.</p>
+
+    <h3>A toolkit, not a single tool</h3>
+    <p>Experimenting with several tools builds practical AI fluency: you learn what each does well, where it fails and which suits which task. Three kinds of tool from one ecosystem illustrate the range:</p>
+    <div class="grid-3">
+      <div class="card"><h4>General assistant</h4><p>For conversation, brainstorming, analysis, writing and research, for example <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a>, <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>. <em>Interact.</em></p></div>
+      <div class="card"><h4>Source-grounded notebook</h4><p>Upload your own articles, PDFs, sites or videos, then ask questions, summarise and make study resources grounded in those sources, for example <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer">NotebookLM</a>. <em>Work with sources.</em></p></div>
+      <div class="card"><h4>Developer playground</h4><p>Test prompts, adjust model and safety settings, try structured output and move towards building apps, for example <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">Google AI Studio</a>. <em>Experiment and build.</em></p></div>
+    </div>
+
+    <h3>Chat mode vs agent mode</h3>
+    <div class="split">
+      <figure class="figure"><img src="assets/chat-robots.jpg" alt="Two friendly robots in conversation" loading="lazy" width="482" height="332"></figure>
+      <p>Many assistants now offer both a conversational mode and a more agentic "work" or "agent" mode (in ChatGPT, for example, Chat and Work). In <strong>chat</strong>, you decide what happens next with each prompt. In an <strong>agent</strong> mode, you give a goal and the AI can plan and carry out intermediate steps itself: researching, analysing files, producing a document. The key difference is <strong>how much control you delegate</strong>, which is exactly the autonomy question from Parts 1–4.</p>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Chat</th><th>Agent / work mode</th></tr></thead>
+      <tbody>
+        <tr><td><b>Purpose</b></td><td>Quick questions, conversation, exploration</td><td>Longer, multi-step tasks and finished deliverables</td></tr>
+        <tr><td><b>Best for</b></td><td>Brainstorming, explaining, feedback, refining ideas</td><td>Research, analysis, synthesis; documents, slides, spreadsheets, reports</td></tr>
+        <tr><td><b>How you interact</b></td><td>You lead through a sequence of prompts</td><td>You set a goal; it works through steps</td></tr>
+        <tr><td><b>Autonomy</b></td><td>Reactive</td><td>More agentic: plans, researches and carries out tasks</td></tr>
+        <tr><td><b>Review and control</b></td><td>You decide what to ask next</td><td>You follow progress, redirect and approve important actions</td></tr>
+        <tr><td><b>Example</b></td><td>"Explain this article and give me three interpretations."</td><td>"Research this topic, compare the evidence and produce a briefing document."</td></tr>
+      </tbody>
+    </table></div>
+    <p>Neither mode is better; choose the one that fits the task. In both, you remain responsible for directing the work, reviewing results and making the final decisions.</p>
+
+    <h3>Tokens: AI's finite resource</h3>
+    <p><strong>Tokens</strong> are the small units of text an AI model processes: a whole word, part of a word, punctuation or a space. Models read prompts and write responses as tokens, and limits on tokens affect how much a model can handle at once. As a rough guide, <strong>100 tokens is about 75 English words</strong>.</p>
+    <div class="activity">
+      <span class="tag">Try it</span>
+      <p>Open the <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">OpenAI Tokenizer</a> and compare a short sentence, a long paragraph, a technical term, text in another language and a prompt full of numbers and symbols. Notice how the token counts differ.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h4>More is not always better</h4><p>Huge prompts, unnecessary uploads and very long responses use more of your allowance without improving the result.</p></div>
+      <div class="card"><h4>Context has a cost</h4><p>Longer conversations and big documents give the model more to process every time.</p></div>
+      <div class="card"><h4>Iterate with purpose</h4><p>Give the relevant context, ask focused questions and request only the detail you need.</p></div>
+    </div>
+    <div class="big-statement">Build an AI toolkit, not an AI dependency.</div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Task</th><th>Sensible approach</th></tr></thead>
+      <tbody>
+        <tr><td>Quick definition or simple question</td><td>Any free assistant</td></tr>
+        <tr><td>Brainstorming, rewriting a short paragraph, first look at a topic</td><td>A free tool is usually enough</td></tr>
+        <tr><td>Analysing a large document or dataset; complex multi-step reasoning; advanced features</td><td>Your most capable (often paid or organisation-provided) tool</td></tr>
+        <tr><td>Important academic or professional work</td><td>Compare outputs across more than one model to expose differences, errors and assumptions</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Key lesson:</strong> don't use your most powerful AI resource for everything. Match the tool to the complexity and importance of the task.</p>
+
+    <h3>Legal basics: what goes in, what comes out</h3>
+    <p>Generative AI raises legal risks at both ends: the content you <strong>input</strong> and the <strong>outputs</strong> it creates and how you use them. Much of it rests on copyright. In Australia, copyright protects the original <em>expression</em> of an idea, not the idea, fact or information itself. It is free and automatic under the <em>Copyright Act 1968</em> (Cth), applies on creation and needs no registration.</p>
+    <div class="grid-2">
+      <div class="card io"><span class="tag">Input risks</span>
+        <ul>
+          <li><strong>Copyright:</strong> uploading someone else's work without permission may infringe their exclusive right to reproduce or communicate it. Check how, and for what purposes, material may be used before you upload it.</li>
+          <li><strong>Confidentiality:</strong> entering information you received in confidence, without the discloser's consent, may breach that obligation, and it could resurface in later outputs.</li>
+          <li><strong>Privacy:</strong> entering personal information without consent may breach privacy law, and tools cannot easily delete what has been entered.</li>
+          <li><strong>Acceptable use:</strong> every tool has an acceptable use policy you agree to. Use it for legitimate tasks, don't try to bypass guardrails, and treat a warning as a compliance signal.</li>
+        </ul></div>
+      <div class="card io"><span class="tag">Output risks</span>
+        <ul>
+          <li><strong>Copyright infringement:</strong> an output can reproduce a "substantial" part of an existing work (judged on quality, not quantity), especially when you ask for a very specific style or niche.</li>
+          <li><strong>Ownership:</strong> Australian copyright requires human skill and effort. Purely AI-generated content may not be protected, which matters if you want to own or commercialise it.</li>
+          <li><strong>Licence terms:</strong> some tools limit how outputs may be used. Read the terms before commercial use.</li>
+          <li><strong>Misleading conduct:</strong> presenting AI-generated work as a named person's, or not disclosing AI involvement where expected, can breach Australian Consumer Law or contract terms.</li>
+        </ul></div>
+    </div>
+    <div class="callout"><strong>Practical rules.</strong> Treat sharing with a public AI tool as sharing with an uncontrolled third party. Don't enter confidential, personal or sensitive information into public tools; de-identify and redact; use the tool's privacy and data settings; prefer tools your organisation or institution provides under its own agreements; and disclose AI use where it is expected. This is general information, not legal advice.</div>
+
+    <div class="qc" data-qc="part8"><div class="qc-head"><h3>Quick check: Part 8</h3><span class="qc-score"></span></div><div class="qc-list"></div></div>
+
+    <div class="card next">
+      <h3>Where next?</h3>
+      <p>Ready to build with AI? The <a href="https://mcahalane.github.io/IS-Vibe-Coding/">Vibe Coding: Building with AI</a> module applies the same human-oversight thinking to creating a working web app.</p>
+    </div>
+  </section>
+
+  <!-- ================= GLOSSARY ================= -->
+  <section id="glossary" class="block">
+    <div class="kicker">Reference</div>
+    <h2>Key terms</h2>
+    <input type="search" id="gloss-search" placeholder="Search a term, e.g. &quot;rubber&quot;, &quot;frontier&quot;, &quot;tokens&quot;…" aria-label="Search key terms">
+    <dl class="glossary" id="gloss-list"></dl>
+    <p class="note" id="gloss-empty" hidden>No terms match that search.</p>
+  </section>
+
+  <!-- ================= SOURCES ================= -->
+  <section id="sources" class="block">
+    <div class="kicker">Reference</div>
+    <h2>Sources and further reading</h2>
+    <h3>Research and cases</h3>
+    <ul class="sources">
+      <li>Dell'Acqua, F., McFowland III, E., Mollick, E. R., Lifshitz-Assaf, H., Kellogg, K. C., Rajendran, S., Krayer, L., Candelon, F., &amp; Lakhani, K. R. (2026). Navigating the jagged technological frontier: Field experimental evidence of the effects of artificial intelligence on knowledge worker productivity and quality. <em>Organization Science, 37</em>(2), 403–423. <a href="https://doi.org/10.1287/orsc.2025.21838" target="_blank" rel="noopener noreferrer">doi.org/10.1287/orsc.2025.21838</a></li>
+      <li>Harvard Business School AI Institute. (2023). <a href="https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/" target="_blank" rel="noopener noreferrer">Navigating the jagged technological frontier</a>; (2026). <a href="https://aiinstitute.hbs.edu/back-to-the-beginnings-of-ai-at-work/" target="_blank" rel="noopener noreferrer">Back to the beginnings of AI at work</a>.</li>
+      <li>Insight Partners. (2025). <a href="https://www.youtube.com/watch?v=Yka2S-yTX70" target="_blank" rel="noopener noreferrer">Navigating the jagged frontier of generative AI: Ethan Mollick and Lonne Jaffe</a> [Video].</li>
+      <li>Mitchell, M., Ghosh, A., &amp; Passi, S. (2026). <a href="https://arxiv.org/pdf/2608.23642" target="_blank" rel="noopener noreferrer">AI agents push humans out of the loop</a>. arXiv pre-print 2608.23642 (not yet peer reviewed).</li>
+      <li>Rozenblit, L., &amp; Keil, F. C. (2002). The misunderstood limits of folk science: An illusion of explanatory depth. <em>Cognitive Science, 26</em>(5), 521–562.</li>
+      <li>Fernbach, P. M., Rogers, T., Fox, C. R., &amp; Sloman, S. A. (2013). Political extremism is supported by an illusion of understanding. <em>Psychological Science, 24</em>(6), 939–946.</li>
+      <li>Atlassian. <a href="https://www.atlassian.com/software/jira/guides/agentic-engineering/guardrails-and-safety" target="_blank" rel="noopener noreferrer">Guardrails and safety for AI agents in Jira</a>.</li>
+      <li>Dynatrace. <a href="https://www.dynatrace.com/customers/macquarie-bank/" target="_blank" rel="noopener noreferrer">Macquarie Bank customer story</a>.</li>
+      <li>Commonwealth Bank of Australia. <a href="https://www.commbank.com.au/articles/newsroom/2026/05/the-ai-future-australia-chooses-to-build.html" target="_blank" rel="noopener noreferrer">The AI future Australia chooses to build</a> (2026); <a href="https://www.commbank.com.au/articles/newsroom/2024/06/matt-comyn-responsible-ai.html" target="_blank" rel="noopener noreferrer">Matt Comyn on responsible AI</a> (2024).</li>
+      <li>Digital Transformation Agency. <a href="https://www.dta.gov.au/help-and-advice/technology-and-tools/artificial-intelligence/policy-responsible-use-ai-government" target="_blank" rel="noopener noreferrer">Policy for the responsible use of AI in government</a>.</li>
+    </ul>
+    <h3>Videos</h3>
+    <ul class="sources">
+      <li><a href="https://www.youtube.com/watch?v=8U1fE5JWR3M" target="_blank" rel="noopener noreferrer">What is Human in the Loop (HITL)?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=9iS-YYLIXiw&amp;t=98s" target="_blank" rel="noopener noreferrer">What is Human in the Loop with AI? How HITL shapes AI systems</a></li>
+      <li><a href="https://www.youtube.com/shorts/eUq3CGoTcHs" target="_blank" rel="noopener noreferrer">Rozenblit and Keil: the illusion of explanatory depth</a> (YouTube Short)</li>
+      <li><a href="https://youtube.com/playlist?list=PLU8ezI8GYqs5K59MKArY9azHLtTOaUgPA" target="_blank" rel="noopener noreferrer">Getting started with Gemini</a> (playlist)</li>
+    </ul>
+    <h3>Learn the tools</h3>
+    <div class="grid-2">
+      <ul class="sources">
+        <li><a href="https://learn.chatgpt.com/docs/quickstart" target="_blank" rel="noopener noreferrer">ChatGPT Quickstart</a></li>
+        <li><a href="https://learn.chatgpt.com/docs/get-started-with-work" target="_blank" rel="noopener noreferrer">Get started with ChatGPT Work</a></li>
+        <li><a href="https://academy.openai.com/public/clubs/higher-education-05x4z/resources/prompt-pack-for-students" target="_blank" rel="noopener noreferrer">Prompt pack for students</a> (OpenAI Academy)</li>
+        <li><a href="https://openai.com/academy/brainstorming/" target="_blank" rel="noopener noreferrer">Brainstorming</a>, <a href="https://openai.com/academy/writing/" target="_blank" rel="noopener noreferrer">writing</a> and <a href="https://openai.com/academy/data-analysis/" target="_blank" rel="noopener noreferrer">analysing data</a> with ChatGPT</li>
+        <li><a href="https://openai.com/policies/usage-policies/" target="_blank" rel="noopener noreferrer">OpenAI usage policies</a></li>
+      </ul>
+      <ul class="sources">
+        <li><a href="https://grow.google/students/" target="_blank" rel="noopener noreferrer">Google AI training and tools for students</a></li>
+        <li><a href="https://grow.google/ai-essentials/" target="_blank" rel="noopener noreferrer">Google AI Essentials</a></li>
+        <li><a href="https://support.google.com/gemini/?hl=en" target="_blank" rel="noopener noreferrer">Gemini Apps Help</a></li>
+        <li><a href="https://support.google.com/gemininotebook/answer/16164461?hl=en-AU" target="_blank" rel="noopener noreferrer">Gemini Notebook (formerly NotebookLM) help</a></li>
+        <li><a href="https://workspace.google.com/learning/report/content/geminiatworkapracticalguide" target="_blank" rel="noopener noreferrer">Gemini at work: a practical guide</a></li>
+      </ul>
+    </div>
+    <h3>Copyright and responsible use</h3>
+    <ul class="sources">
+      <li><a href="https://www.copyright.org.au/" target="_blank" rel="noopener noreferrer">Australian Copyright Council</a></li>
+      <li>UNSW Sydney: <a href="https://www.unsw.edu.au/student/managing-your-studies/academic-skills-support/toolkit/ai" target="_blank" rel="noopener noreferrer">Using AI in university</a> and <a href="https://www.library.unsw.edu.au/copyright" target="_blank" rel="noopener noreferrer">Library copyright guidance</a>.</li>
+    </ul>
+    <p class="note">The legal content in Part 8 summarises general guidance on generative AI and Australian copyright, confidentiality, privacy and consumer law. It is general information only, not legal advice. Scenarios marked "fictional" are teaching examples. Illustrations are AI-generated teaching images. Product features and model availability change quickly, so the tools you see may differ from these descriptions.</p>
+    <div class="actions"><button type="button" class="btn" id="print">Print or save as PDF</button></div>
+  </section>
+
+  </div>
+  <footer class="foot">Information Systems · Introduction to AI for Business · A standalone learning resource. No tracking or analytics; your answers and notes stay in your browser.</footer>
+</main>
+</div>
+<script src="assets/module.js"></script>
+</body>
+</html>
